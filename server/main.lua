@@ -17,18 +17,18 @@ MySQL.ready(function()
 					price = shopResult[i].price,
 				})
 			else
-				print(('esx_shops: invalid item "%s" found!'):format(shopResult[i].item))
+				print(('esx_multishops: invalid item "%s" found!'):format(shopResult[i].item))
 			end
 		end
 	end)
 end)
 
-ESX.RegisterServerCallback('esx_shops:requestDBItems', function(source, cb)
+ESX.RegisterServerCallback('esx_multishops:requestDBItems', function(source, cb)
 	cb(ShopItems)
 end)
 
-RegisterServerEvent('esx_shops:buyItem')
-AddEventHandler('esx_shops:buyItem', function(itemName, amount, zone)
+RegisterServerEvent('esx_multishops:buyItem')
+AddEventHandler('esx_multishops:buyItem', function(itemName, amount, zone)
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
 
@@ -36,7 +36,7 @@ AddEventHandler('esx_shops:buyItem', function(itemName, amount, zone)
 
 	-- is the player trying to exploit?
 	if amount < 0 then
-		print('esx_shops: ' .. xPlayer.identifier .. ' attempted to exploit the shop!')
+		print('esx_multishops: ' .. xPlayer.identifier .. ' attempted to exploit the shop!')
 		return
 	end
 
