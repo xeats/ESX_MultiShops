@@ -1,10 +1,25 @@
 # esx_multishops
 
+This must replace esx_shops, not launched with it.
+Works just like esx_shops, with the same database table :
+
+```SQL
+INSERT INTO `shops` (store, item, price) VALUES
+	('TwentyFourSeven','bread',30),
+	('TwentyFourSeven','water',15),
+	('RobsLiquor','bread',30),
+	('RobsLiquor','water',15),
+	('LTDgasoline','bread',30),
+	('LTDgasoline','water',15),
+	('myshopname','myitem',10)
+;
+```
+
 
 Just modify/add these sections in config file :
 
 ``` lua
-	RobsLiquor = {
+	RobsLiquor = { --name to use in DB
 		Items = {},
 		Type = 93, -- blip type (https://docs.fivem.net/docs/game-references/blips/)
 		BlipColor = 27, -- blip color (https://docs.fivem.net/docs/game-references/blips/#blip-colors)
