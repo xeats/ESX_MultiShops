@@ -7,7 +7,7 @@ Just modify/add these sections in config file :
 	RobsLiquor = {
 		Items = {},
 		Type = 93, -- blip type (https://docs.fivem.net/docs/game-references/blips/)
-		BlipColor = 27, - blip color (https://docs.fivem.net/docs/game-references/blips/#blip-colors)
+		BlipColor = 27, -- blip color (https://docs.fivem.net/docs/game-references/blips/#blip-colors)
 		MarkerType = 1, -- (https://docs.fivem.net/docs/game-references/markers/)
 		MarkerColor = {r = 0, g = 128, b = 255}, -- RGB color (see https://www.w3schools.com/colors/colors_picker.asp)
 		Name = "robs", -- name used for the blip (on the map)
